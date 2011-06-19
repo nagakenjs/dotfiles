@@ -1,0 +1,14 @@
+# 全ファイルを一旦無視
+/*
+# dotfileを無視
+/.*
+
+!/.bashrc
+!/.inputrc
+!/.gitignore
+!/.gitconfig
+!/.gitmodules
+!/.screenrc
+!/.vimrc
+!/.vim
+!/.zshrc
