@@ -21,11 +21,10 @@ export RUBYLIB=$RUBYLIB:~/bin/ruby:~/Novels/Generator
 export ANDROID_SDK_HOME=/Applications/Android/sdk
 export ANDROID_NDK_HOME=/Applications/Android/ndk
 
-PATH=/opt/local/bin:$PATH
-PATH=$PATH:~/bin
-PATH=$PATH:/usr/local/bin
-PATH=$PATH:$ANDROID_SDK_HOME/tools:$ANDROID_SDK_HOME/platform-tools
-PATH=$PATH:$ANDROID_NDK_HOME
+PATH=~/bin:$PATH
+PATH=/usr/local/bin:$PATH
+PATH=$ANDROID_SDK_HOME/tools:$ANDROID_SDK_HOME/platform-tools:$PATH
+PATH=$ANDROID_NDK_HOME:$PATH
 export PATH
 
 export MANPATH=/opt/local/share/man:$MANPATH

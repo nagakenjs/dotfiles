@@ -1,3 +1,5 @@
 [user]
 	name = Kenji Nagase
 	email = androxion@gmail.com
+[color]
+	ui = auto
