@@ -71,7 +71,7 @@ alias fcd='source ~/bin/fcd.sh'
 alias ct='open -a CotEditor'
 alias fr='open -a Fraise'
 alias mi='open -a mi'
-alias gvim='open -a MacVim'
+alias mvi='mvim --remote-tab-silent'
 alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -p "$@"'
 
 # Lines configured by zsh-newuser-install
