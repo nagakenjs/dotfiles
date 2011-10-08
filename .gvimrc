@@ -14,4 +14,7 @@ if has('gui_macvim')
 	set antialias
 
 	colorscheme macvim
+
+	" 制御文字の色設定
+	highlight SpecialKey guifg=darkgray
 endif

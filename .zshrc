@@ -31,6 +31,9 @@ export MANPATH=/opt/local/share/man:$MANPATH
 
 export TZ='Asia/Tokyo'
 
+# Scala用文字化け対策
+export JAVA_OPTS="-Dfile.encoding=UTF-8"
+
 # set the number of open files to be 1024
 ulimit -S -n 1024
 

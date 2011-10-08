@@ -33,3 +33,8 @@ autocmd! BufRead,BufNewFile *.scala set filetype=scala
 
 " 折りたたみ設定
 set foldmethod=marker
+
+" 不可視文字の表示
+set list
+set listchars=tab:»\ ,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+highlight SpecialKey ctermfg=darkgray
