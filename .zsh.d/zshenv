@@ -1,0 +1,58 @@
+case "${OSTYPE}" in
+darwin*)
+	# MacOSX
+	export ANDROID_SDK_HOME=/Applications/Android/sdk
+	export ANDROID_NDK_HOME=/Applications/Android/ndk
+	;;
+linux*)
+	# Linux
+	export ANDROID_SDK_HOME=/work/android/sdk
+	export ANDROID_NDK_HOME=/work/android/ndk
+	export SCALA_HOME=/work/scala/2.8.2
+	;;
+*)
+	# 共通
+	;;
+esac
+
+# パスの設定
+## 重複したパスを登録しない
+typeset -U path
+## (N-/): 存在しないディレクトリは登録しない
+path=(
+	${path}
+	~/bin(N-/)
+	/bin(N-/)
+	/usr/local/bin(N-/)
+	${ANDROID_SDK_HOME}/tools(N-/)
+	${ANDROID_SDK_HOME}/platform-tools(N-/)
+	${ANDROID_NDK_HOME}(N-/)
+	$SCALA_HOME/bin(N-/)
+)
+
+# sudo時のパスの設定
+## -x: export SUDO_PATHも一緒に行う
+## -T: SUDO_PATHとsudo_pathを連動する
+typeset -xT SUDO_PATH sudo_path
+## 重複したパスを登録しない
+typeset -U sudo_path
+## (N-/): 存在しないディレクトリは登録しない
+sudo_path=({,/usr/pkg,/usr/local,/usr}/sbin(N-/))
+
+# man用パスの設定
+## 重複したパスを登録しない
+typeset -U manpath
+## (N-/): 存在しないディレクトリは登録しない
+manpath=(
+	/opt/local/share/man(N-/)
+)
+
+# Rubyの設定
+typeset -xT RUBYLIB ruby_path
+## 重複したパスを登録しない
+typeset -U ruby_path
+ruby_path=(
+	./lib
+	~/bin/ruby(N-/)
+	~/Novels/Generator(N-/)
+)

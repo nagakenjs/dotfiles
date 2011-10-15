@@ -17,17 +17,7 @@ setopt list_packed
 # Environment Variables
 export LANG=ja_JP.UTF-8 
 
-export RUBYLIB=$RUBYLIB:~/bin/ruby:~/Novels/Generator
-export ANDROID_SDK_HOME=/Applications/Android/sdk
-export ANDROID_NDK_HOME=/Applications/Android/ndk
-
-PATH=~/bin:$PATH
-PATH=/usr/local/bin:$PATH
-PATH=$ANDROID_SDK_HOME/tools:$ANDROID_SDK_HOME/platform-tools:$PATH
-PATH=$ANDROID_NDK_HOME:$PATH
-export PATH
-
-export MANPATH=/opt/local/share/man:$MANPATH
+source ~/.zsh.d/zshenv
 
 export TZ='Asia/Tokyo'
 
@@ -54,28 +44,7 @@ zstyle ':completion:*' menu select=1
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 ## Alias
-alias ls='ls -GFw'
-alias ll='ls -l'
-alias la='ls -A'
-
-alias ez='vi ~/.zshrc'
-alias sz='source ~/.zshrc'
-
-alias diff='colordiff -u'
-
-alias s='screen'
-alias sls='screen -ls'
-alias sr='screen -r'
-
-alias irb='irb -r irb/completion'
-
-alias fcd='source ~/bin/fcd.sh'
-
-alias ct='open -a CotEditor'
-alias fr='open -a Fraise'
-alias mi='open -a mi'
-alias mvi='mvim --remote-tab-silent'
-alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -p "$@"'
+source ~/.zsh.d/zshalias
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
