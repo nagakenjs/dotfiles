@@ -11,14 +11,14 @@ linux*)
 	export SCALA_HOME=/work/scala/2.8.2
 	;;
 *)
-	# $B6&DL(B
+	# 共通
 	;;
 esac
 
-# $B%Q%9$N@_Dj(B
-## $B=EJ#$7$?%Q%9$rEPO?$7$J$$(B
+# パスの設定
+## 重複したパスを登録しない
 typeset -U path
-## (N-/): $BB8:_$7$J$$%G%#%l%/%H%j$OEPO?$7$J$$(B
+## (N-/): 存在しないディレクトリは登録しない
 path=(
 	${path}
 	~/bin(N-/)
@@ -30,26 +30,26 @@ path=(
 	$SCALA_HOME/bin(N-/)
 )
 
-# sudo$B;~$N%Q%9$N@_Dj(B
-## -x: export SUDO_PATH$B$b0l=o$K9T$&(B
-## -T: SUDO_PATH$B$H(Bsudo_path$B$rO"F0$9$k(B
+# sudo時のパスの設定
+## -x: export SUDO_PATHも一緒に行う
+## -T: SUDO_PATHとsudo_pathを連動する
 typeset -xT SUDO_PATH sudo_path
-## $B=EJ#$7$?%Q%9$rEPO?$7$J$$(B
+## 重複したパスを登録しない
 typeset -U sudo_path
-## (N-/): $BB8:_$7$J$$%G%#%l%/%H%j$OEPO?$7$J$$(B
+## (N-/): 存在しないディレクトリは登録しない
 sudo_path=({,/usr/pkg,/usr/local,/usr}/sbin(N-/))
 
-# man$BMQ%Q%9$N@_Dj(B
-## $B=EJ#$7$?%Q%9$rEPO?$7$J$$(B
+# man用パスの設定
+## 重複したパスを登録しない
 typeset -U manpath
-## (N-/): $BB8:_$7$J$$%G%#%l%/%H%j$OEPO?$7$J$$(B
+## (N-/): 存在しないディレクトリは登録しない
 manpath=(
 	/opt/local/share/man(N-/)
 )
 
-# Ruby$B$N@_Dj(B
+# Rubyの設定
 typeset -xT RUBYLIB ruby_path
-## $B=EJ#$7$?%Q%9$rEPO?$7$J$$(B
+## 重複したパスを登録しない
 typeset -U ruby_path
 ruby_path=(
 	./lib

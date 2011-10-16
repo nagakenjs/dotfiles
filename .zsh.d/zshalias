@@ -1,3 +1,17 @@
+# {{{ 共通 ---------------------------------------------
+alias ez='vi ~/.zshrc'
+alias sz='source ~/.zshrc'
+
+alias diff='colordiff -u'
+
+alias s='screen'
+alias sls='screen -ls'
+alias sr='screen -r'
+
+alias irb='irb -r irb/completion'
+# }}} 共通 ---------------------------------------------
+
+# {{{ OSごとの定義 ---------------------------------------------
 case "${OSTYPE}" in
 darwin*)
 	# MacOSX
@@ -6,8 +20,6 @@ darwin*)
 	alias la='ls -A'
 
 	alias ct='open -a CotEditor'
-	alias fr='open -a Fraise'
-	alias mi='open -a mi'
 	alias mvi='mvim --remote-tab-silent'
 	alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -p "$@"'
 
@@ -21,17 +33,5 @@ linux*)
 
 	alias gvim='gvim --remote-tab-silent'
 	;;
-*)
-	# $B6&DL(B
-	alias ez='vi ~/.zshrc'
-	alias sz='source ~/.zshrc'
-
-	alias diff='colordiff -u'
-
-	alias s='screen'
-	alias sls='screen -ls'
-	alias sr='screen -r'
-
-	alias irb='irb -r irb/completion'
-	;;
 esac
+# }}} OSごとの定義 ---------------------------------------------

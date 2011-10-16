@@ -14,4 +14,4 @@
 !/.vim
 !/.zshrc
 
-.vim/bundle
+.vim/bundle/vundle
