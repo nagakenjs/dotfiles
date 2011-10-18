@@ -34,7 +34,7 @@ ulimit -S -n 1024
 PROMPT="[%n@%m %1d]%# "
 PROMPT2="%_%% "
 SPROMPT="%r is correct? [n,y,a,e]: "
-RPROMPT="[%~]"
+RPROMPT="[%~] (%T)"
 
 ## 補完時に大小文字を区別しない
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
