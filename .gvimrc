@@ -12,6 +12,7 @@ set antialias
 " OSごとの個別の処理
 if has('win32') || has('win64')
 	" Windows用
+	set guifont=Consolas:h11:cSHIFTJIS
 elseif has('gui_macvim')
 	" Mac用
 
