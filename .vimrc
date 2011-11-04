@@ -8,9 +8,10 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-Bundle 'scala.vim'
 Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/unite.vim'
+"Bundle 'Shougo/unite.vim'
+
+Bundle 'muhlig/vim-scala'
 
 filetype plugin indent on
 " }}} Vundle ------------------------------------------------------
