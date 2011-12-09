@@ -3,3 +3,14 @@
 	email = androxion@gmail.com
 [color]
 	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	co = checkout
+	st = status -sb
+	ci = commit -a
+	di = diff
+	br = branch
+	sh = stash
+	shp = stash pop
