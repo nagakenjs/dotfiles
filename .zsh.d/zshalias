@@ -33,5 +33,13 @@ linux*)
 
 	alias gvim='gvim --remote-tab-silent'
 	;;
+cygwin*)
+	alias ls='ls -F --color=auto -I"NTUSER.DAT*" -I"ntuser.dat*" -Intuser.ini'
+	alias ll='ls -l'
+	alias la='ls -A'
+
+	alias gv='/mnt/c/Tools/vim/gvim --remote-tab'
+	alias em='/mnt/c/Program\ Files/EmEditor/EmEditor.exe'
+	;;
 esac
 # }}} OSごとの定義 ---------------------------------------------
