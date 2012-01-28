@@ -12,6 +12,7 @@ Bundle 'Shougo/neocomplcache'
 "Bundle 'Shougo/unite.vim'
 
 Bundle 'muhlig/vim-scala'
+Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on
 " }}} Vundle ------------------------------------------------------

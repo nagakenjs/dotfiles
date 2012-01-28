@@ -19,8 +19,9 @@ darwin*)
 	alias ll='ls -l'
 	alias la='ls -A'
 
+	alias eclipse='open /Applications/Eclipse/Eclipse.app'
 	alias ct='open -a CotEditor'
-	alias mvi='mvim --remote-tab-silent'
+	alias gv='mvim --remote-tab-silent'
 	alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -p "$@"'
 
 	alias fcd='source ~/bin/fcd.sh'

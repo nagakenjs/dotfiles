@@ -52,5 +52,6 @@ HISTSIZE=100000
 SAVEHIST=100000
 # End of lines configured by zsh-newuser-install
 
-# For rvm
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+# rbenv
+#path=($HOME/.rbenv/bin(N) $path)
+eval "$(rbenv init -)"
