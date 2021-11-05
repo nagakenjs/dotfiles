@@ -1,17 +1,18 @@
-# {{{ 共通 ---------------------------------------------
-alias ez='vi ~/.zshrc'
+# 共通
+alias ez='vi -p ~/.zshrc ~/.zsh.d/*'
 alias sz='source ~/.zshrc'
 
-alias diff='colordiff -u'
+#alias diff='colordiff -u'
 
 alias s='screen'
 alias sls='screen -ls'
 alias sr='screen -r'
 
 alias irb='irb -r irb/completion'
-# }}} 共通 ---------------------------------------------
 
-# {{{ OSごとの定義 ---------------------------------------------
+alias svndifflist="svn diff | grep '^Index:' | awk '{print \$2}'"
+
+# OSごとの定義
 case "${OSTYPE}" in
 darwin*)
 	# MacOSX
@@ -19,10 +20,8 @@ darwin*)
 	alias ll='ls -l'
 	alias la='ls -A'
 
-	alias eclipse='open /Applications/Eclipse/Eclipse.app'
-	alias ct='open -a CotEditor'
 	alias gv='mvim --remote-tab-silent'
-	alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -p "$@"'
+	alias vi='/usr/local/bin/vim'
 
 	alias fcd='source ~/bin/fcd.sh'
 	;;
@@ -32,15 +31,25 @@ linux*)
 	alias ll='ls -l'
 	alias la='ls -A'
 
+	alias d='LANG=en_US df -hT'
+
 	alias gvim='gvim --remote-tab-silent'
 	;;
 cygwin*)
 	alias ls='ls -F --color=auto -I"NTUSER.DAT*" -I"ntuser.dat*" -Intuser.ini'
 	alias ll='ls -l'
 	alias la='ls -A'
+	alias d='LANG=en_US df -hT'
 
 	alias gv='/mnt/c/Tools/vim/gvim --remote-tab'
 	alias em='/mnt/c/Program\ Files/EmEditor/EmEditor.exe'
 	;;
+msys*)
+	alias ls='ls -F --color=auto -I"NTUSER.DAT*" -I"ntuser.dat*" -Intuser.ini'
+	alias ll='ls -l'
+	alias la='ls -A'
+	alias d='LANG=en_US df -hT'
+	alias vi=vim
+	alias code="/c/'Program Files (x86)'/'Microsoft VS Code'/Code.exe"
+	;;
 esac
-# }}} OSごとの定義 ---------------------------------------------

@@ -14,3 +14,12 @@
 	br = branch
 	sh = stash
 	shp = stash pop
+	tr = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
+[core]
+	editor = vim
+	pager = less -x4
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[push]
+	default = matching
