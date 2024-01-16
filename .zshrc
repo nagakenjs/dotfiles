@@ -2,8 +2,8 @@ autoload -U compinit
 compinit -u
 
 # 先方予測機能
-#autoload predict-on
-#predict-on
+# autoload predict-on
+# predict-on
 
 # cdなんていらん
 setopt auto_cd
@@ -47,9 +47,11 @@ zstyle ':completion:*' menu select=1
 # 補完候補一覧をカラー表示
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
-## Alias
-source ~/.zsh.d/zshalias
-source ~/.zsh.d/zshvcs
+## 外部の設定ファイル読み込み
+for conf in $HOME/.zsh/*.zsh ; do
+  source "${conf}"
+done
+unset conf
 
 # キーバインドはemacsで
 bindkey -e
@@ -74,17 +76,5 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^p" history-beginning-search-backward-end
 bindkey "^n" history-beginning-search-forward-end
 
-# rbenv
-#path=($HOME/.rbenv/bin(N) $path)
-[[ -s $HOME/.rbenv ]] && eval "$(rbenv init -)"
-
-# gitignore.io
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
-
-# peco
-for f (~/.zsh.d/peco/*) source "${f}"
-bindkey '^r' peco-select-history
-bindkey '^@' peco-cdr
-
 # tmuxinator
-source ~/.zsh.d/completion/tmuxinator.zsh
+# source ~/.zsh.d/completion/tmuxinator.zsh
